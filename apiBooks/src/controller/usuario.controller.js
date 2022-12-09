@@ -27,7 +27,7 @@ function loginUsuario(request,response)
 {
     console.log(request.body)
 
-    let sql ="SELECT nombre,apellidos,correo,url FROM usuario WHERE correo = \"" + request.body.correo + "\"  AND password = \"" + request.body.password + "\"   "
+    let sql ="SELECT nombre,apellidos,correo,url,id_usuario FROM usuario WHERE correo = \"" + request.body.correo + "\"  AND password = \"" + request.body.password + "\"   "
 
     connection.query(sql,function(error,result)
     {
